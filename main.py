@@ -1,0 +1,17 @@
+#Data Types
+print("Welcome to the tip calculator!\nLet's figure out what everyone is paying...")
+bill = input("What was the bill? $")
+flt_bill = float(bill)
+people = input("How many people do you want to split the bill? ")
+int_people = int(people)
+tip_perc = input("What percentage of a tip do you want to leave? ")
+int_tip_perc = int(tip_perc)
+tip = ((int_tip_perc / 100) * flt_bill)
+out_tip = round(tip, 2)
+print(f"The tip is ${out_tip}")
+tot_bill = flt_bill + tip
+out_bill = round(tot_bill, 2)
+print(f"The total bill is ${out_bill}")
+split = (tot_bill / int_people)
+out_split = round(split, 2)
+print(f"Each peron should pay ${out_split}")
